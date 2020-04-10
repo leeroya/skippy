@@ -1,10 +1,14 @@
-name: Go
+name: Server Build
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - 'feat/**'
+      - master
   pull_request:
-    branches: [ master ]
+    branches:
+      - 'feat/**'
+      - master
 
 jobs:
 
