@@ -1,6 +1,7 @@
 # Skippy   
 
-![Server Build](https://github.com/leeroya/skippy/workflows/Server%20Build/badge.svg?branch=master)
+![Server Build](https://github.com/leeroya/skippy/workflows/Server%20Build/badge.svg?branch=master)  ![Skippy UI build](https://github.com/leeroya/skippy/workflows/Skippy%20UI%20build/badge.svg?branch=master)
+
 
 Skippy is a project that has been created to have a mechanism to allow students of any age to complete schooling from the comfort of their home. 
 
