@@ -1,4 +1,6 @@
-# Skippy 
+# Skippy   
+
+![Server Build](https://github.com/leeroya/skippy/workflows/Server%20Build/badge.svg?branch=master)
 
 Skippy is a project that has been created to have a mechanism to allow students of any age to complete schooling from the comfort of their home. 
 
@@ -36,6 +38,13 @@ src
 
 
 ```
+
+## Software and tools
+
+Some software tools that are being used, these are not enforced however it can be arranged copied of the software were possible, please email us directly so that we can discuss in further detail.
+
+ * [Gitkraken](https://www.gitkraken.com/b)
+ * [Jetbrains GoLand](https://www.jetbrains.com/go/)
 
 ## Diagrams
 

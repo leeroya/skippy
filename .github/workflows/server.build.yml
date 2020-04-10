@@ -1,16 +1,22 @@
-name: Go
+name: Server Build
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - 'feat/**'
+      - master
   pull_request:
-    branches: [ master ]
+    branches:
+      - 'feat/**'
+      - master
 
 jobs:
 
   build:
     name: Build
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./src/cmd/_skippy_
     steps:
 
     - name: Set up Go 1.13
@@ -31,4 +37,5 @@ jobs:
         fi
 
     - name: Build
+      working-directory: ${{ env.working-directory}}
       run: go build -v .
