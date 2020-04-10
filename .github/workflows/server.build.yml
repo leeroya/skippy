@@ -16,7 +16,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
-      working-directory: ./src
+      working-directory: ./src/cmd/_skippy_
     steps:
 
     - name: Set up Go 1.13
