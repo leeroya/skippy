@@ -15,6 +15,27 @@ Skippy is a project that has been created to have a mechanism to allow students 
 
 - angular [ PWA ]
 
+## Project structure
+
+Based on a overview of : [goland standards](https://github.com/golang-standards/project-layout)  the folder string is as follows:
+
+```
+
+
+src
+---> cmd
+------> _skippy_
+----------------> main.go
+---> internal
+------> pkg
+---------> _usecase_
+----------------> usecase.go
+---> test
+-------> _usecase_test_
+----------------------> usecase_function.test.go
+
+
+```
 
 ## Diagrams
 
