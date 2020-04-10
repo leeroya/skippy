@@ -11,6 +11,8 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./src
     steps:
 
     - name: Set up Go 1.13

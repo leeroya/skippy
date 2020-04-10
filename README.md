@@ -37,6 +37,13 @@ src
 
 ```
 
+## Software and tools
+
+Some software tools that are being used, these are not enforced however it can be arranged copied of the software were possible, please email us directly so that we can discuss in further detail.
+
+ * [Gitkraken](https://www.gitkraken.com/b)
+ * [Jetbrains GoLand](https://www.jetbrains.com/go/)
+
 ## Diagrams
 
 Diagrams are created using [Dia Diagram Editor](http://dia-installer.de/) and diagrams are exported into the diagrams/exported folder for easy viewing.
