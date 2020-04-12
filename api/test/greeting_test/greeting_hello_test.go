@@ -1,4 +1,4 @@
-package _greeting_test_
+package greeting_test
 
 import (
 	"testing"
