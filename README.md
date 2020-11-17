@@ -12,11 +12,11 @@ Skippy is a project that has been created to have a mechanism to allow students 
 
 #### API - Server side
 
-- go
+- dotnet core C# 5.0
 
 #### User interface
 
-- angular [ PWA ]
+- dotnet core Blazor WASM
 
 ## Project structure
 
@@ -26,16 +26,15 @@ Based on a overview of : [goland standards](https://github.com/golang-standards/
 
 
 src
----> cmd
-------> _skippy_
-----------------> main.go
----> internal
-------> pkg
----------> _usecase_
-----------------> usecase.go
----> test
--------> _usecase_test_
-----------------------> usecase_function.test.go
+---> Client
+------> Blazor App
+
+---> Server
+------> API
+
+---> Shared
+-------> Models and Shared Services
+
 
 
 ```
@@ -44,8 +43,7 @@ src
 
 Some software tools that are being used, these are not enforced however it can be arranged copied of the software were possible, please email us directly so that we can discuss in further detail.
 
- * [Gitkraken](https://www.gitkraken.com/b)
- * [Jetbrains GoLand](https://www.jetbrains.com/go/)
+ * Visual Studio
 
 ## Diagrams
 

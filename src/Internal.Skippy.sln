@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.808.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internal.Skippy.App.Server", "Internal.Skippy.App\Server\Internal.Skippy.App.Server.csproj", "{E88C87A1-1657-40CD-B626-99DA829A9DDB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internal.Skippy.App.Server", "Server\Internal.Skippy.App.Server.csproj", "{E88C87A1-1657-40CD-B626-99DA829A9DDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internal.Skippy.App.Client", "Internal.Skippy.App\Client\Internal.Skippy.App.Client.csproj", "{9D8AB2A8-C7A8-4338-97F8-0FBD2190D80A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internal.Skippy.App.Client", "Client\Internal.Skippy.App.Client.csproj", "{9D8AB2A8-C7A8-4338-97F8-0FBD2190D80A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internal.Skippy.App.Shared", "Internal.Skippy.App\Shared\Internal.Skippy.App.Shared.csproj", "{97170A05-2B44-44DF-B82C-5F5FF3ACA203}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internal.Skippy.App.Shared", "Shared\Internal.Skippy.App.Shared.csproj", "{97170A05-2B44-44DF-B82C-5F5FF3ACA203}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
