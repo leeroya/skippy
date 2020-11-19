@@ -1,17 +1,72 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <MatAppBar Fixed="true">
+        <MatAppBarRow>
+            <MatAppBarSection>
+                <MatIconButton Icon="menu" OnClick="@((e) => ButtonClicked())" ></MatIconButton>
+                <MatAppBarTitle>Blazor news client</MatAppBarTitle>
+            </MatAppBarSection>
+            <MatAppBarSection Align="@MatAppBarSectionAlign.End">
+                <MatIconButton Icon="favorite" Link="http://samprof.com"></MatIconButton>
+            </MatAppBarSection>
+        </MatAppBarRow>
+    </MatAppBar>
+    <MatDrawerContainer Style="width: 100vw; height: 100vh; margin-top:80px;    ">
+        <MatDrawer @bind-Opened="@Opened">
+            <MatNavMenu>
+                <MatNavItem OnClick="ClickMe">Item 1 - OnClick</MatNavItem>
+                <MatNavItem Disabled="true">Item 2</MatNavItem>
+                <MatNavSubMenu @bind-Expanded="@navSubMenuOpenState">
+                    <MatNavSubMenuHeader>
+                        <MatNavItem AllowSelection="false"><MatIcon Icon="all_inbox"></MatIcon>&nbsp; Item 3 - Expanded: @navSubMenuOpenState</MatNavItem>
+                    </MatNavSubMenuHeader>
+                    <MatNavSubMenuList>
+                        <MatNavItem Href="#">Item 3.A&nbsp; <MatIcon Icon="backup"></MatIcon></MatNavItem>
+                        <MatNavItem>Item 3.B&nbsp; <MatIcon Icon="build"></MatIcon></MatNavItem>
+                        <MatNavItem>Item 3.C&nbsp; <MatIcon Icon="explore"></MatIcon></MatNavItem>
+                    </MatNavSubMenuList>
+                </MatNavSubMenu>
+                <MatNavItem><MatIcon Icon="grade"></MatIcon>&nbsp; Item 4 </MatNavItem>
+                <MatDivider></MatDivider>
+                <MatNavItem><MatIcon Icon="face"></MatIcon>&nbsp; Item 5</MatNavItem>
+                <MatNavSubMenu>
+                    <MatNavSubMenuHeader>
+                        <MatNavItem AllowSelection="false"><MatIcon Icon="explore"></MatIcon>&nbsp; Item 6</MatNavItem>
+                    </MatNavSubMenuHeader>
+                    <MatNavSubMenuList>
+                        <MatNavItem Disabled="true" Href="#">Item 6.A</MatNavItem>
+                        <MatNavItem>Item 6.B</MatNavItem>
+                        <MatNavItem>Item 6.C</MatNavItem>
 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
+                    </MatNavSubMenuList>
+                </MatNavSubMenu>
+                <MatNavItem Href="https://blazorboilerplate.com/" Target="_blank">Blazor Boilerplate - Href - Target = _blank</MatNavItem>
+                <MatNavItem Href="https://www.matblazor.com/">MatBlazor - Href</MatNavItem>
+            </MatNavMenu>
+        </MatDrawer>
+        <MatDrawerContent>
+            <div class="content px-4">
+                @Body
+            </div>
+        </MatDrawerContent>
+    </MatDrawerContainer>   
 </div>
+@code
+{
+    [Inject] IJSRuntime JS { get; set; }
+
+    bool navSubMenuOpenState;
+    bool Opened = false;
+
+    async Task ClickMe()
+    {
+        Console.WriteLine("test");
+        await JS.InvokeAsync<object>("alert", "Successful OnClick!");
+    }
+
+    void ButtonClicked()
+    {
+        Opened = !Opened;
+    }
+}
