@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuService} from '../services/menu.service';
 
+import { AuthService } from '@auth0/auth0-angular';
+
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
@@ -8,10 +10,14 @@ import {MenuService} from '../services/menu.service';
 })
 export class TopBarComponent implements OnInit {
   menuState = false;
-  constructor(private menuService: MenuService) { }
+  public name!: string;
+  constructor(private menuService: MenuService, public auth: AuthService) { }
   ngOnInit(): void {
     this.menuService.openStateChanged.subscribe((o: boolean) => {
       this.menuState = o;
+    });
+    this.auth.user$.subscribe((u: any) => {
+       this.name = u.name;
     });
   }
 

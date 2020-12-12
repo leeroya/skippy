@@ -5,7 +5,14 @@
   <span>Maxmind</span>
   <span class="example-spacer"></span>
   <span class="flexExpand"></span>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <div *ngIf="name !== ''">
+      {{ name }}
+  </div>
+  <button
+      (click)="auth.loginWithRedirect()"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon">
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
