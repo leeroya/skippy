@@ -8,7 +8,8 @@ import {MenuService} from '../services/menu.service';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
-  @ViewChild('sidenav', {static: true}) sidenav: MatSidenav;
+  // @ts-ignore
+  @ViewChild('sidenav', {static: true}) public sidenav: MatSidenav;
 
   constructor(private menuService: MenuService) { }
 

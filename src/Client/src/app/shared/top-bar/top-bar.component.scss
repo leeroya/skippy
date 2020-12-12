@@ -11,7 +11,9 @@
     color: white;
     font-weight: 600;
   }
-
+  .mat-toolbar {
+    background-color: #61885d;
+  }
   .toolbar img {
     margin: 0 16px;
   }
@@ -23,4 +25,8 @@
 
   .toolbar #twitter-logo:hover {
     opacity: 0.8;
+  }
+
+  .flexExpand {
+    flex: 1 1 auto;
   }
