@@ -2,14 +2,51 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon (click)="toggle()">menu</mat-icon>
   </button>
-  <span>Maxmind</span>
-  <span class="example-spacer"></span>
-  <span class="flexExpand"></span>
+  <span>MaxMind</span>
+  <div class="spacer"></div>
+  <mat-progress-bar class="flexExpand" mode="determinate" [value]="overAllProgress"></mat-progress-bar>
+  <div style="font-size: 14px; padding: 5px;">% Complete</div>
   <button
-      (click)="auth.loginWithRedirect()"
+      mat-icon-button
+      [matMenuTriggerFor]="notificationsMenu"
+      class="example-icon"
+      aria-label="Example icon-button with menu icon">
+    <mat-icon *ngIf="notifications.length == 0" >notifications</mat-icon>
+    <mat-icon *ngIf="notifications.length > 0" >notifications_active</mat-icon>
+  </button>
+  <mat-menu #notificationsMenu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+  <button
+      [matMenuTriggerFor]="profileMenu"
       mat-icon-button
       class="image"
       [style.backgroundImage]="'url(' + picture + ')'"
       aria-label="Example icon-button with share icon">
   </button>
+  <mat-menu #profileMenu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
 </mat-toolbar>

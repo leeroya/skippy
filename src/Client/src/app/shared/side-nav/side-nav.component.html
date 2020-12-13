@@ -2,8 +2,27 @@
   <mat-sidenav opened mode="side" #sidenav>
     <mat-nav-list>
       <a mat-list-item routerLink="/app-dashboard" routerLinkActive="active">Dashboard</a>
-      <a mat-list-item routerLink="/app-activity-reports" routerLinkActive="active">Activity reports</a>
-      <a mat-list-item >Page Three</a>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          Reports
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+          <a mat-list-item routerLink="/app-activity-reports" routerLinkActive="active">Activity reports</a>
+          <a mat-list-item routerLink="/app-activity-reports" routerLinkActive="active">Student results</a>
+          <a mat-list-item routerLink="/app-activity-reports" routerLinkActive="active">Year report</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          Terms
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+          <a mat-list-item routerLink="#">Term One</a>
+          <a mat-list-item routerLink="#">Term Two</a>
+          <a mat-list-item routerLink="#">Term Three</a>
+          <a mat-list-item routerLink="#">Term Four</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
