@@ -11,6 +11,7 @@ import { AuthService } from '@auth0/auth0-angular';
 export class TopBarComponent implements OnInit {
   menuState = false;
   public name!: string;
+  public picture!: string;
   constructor(private menuService: MenuService, public auth: AuthService) { }
   ngOnInit(): void {
     this.menuService.openStateChanged.subscribe((o: boolean) => {
@@ -18,6 +19,7 @@ export class TopBarComponent implements OnInit {
     });
     this.auth.user$.subscribe((u: any) => {
        this.name = u.name;
+       this.picture = u.picture;
     });
   }
 

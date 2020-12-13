@@ -30,3 +30,11 @@
   .flexExpand {
     flex: 1 1 auto;
   }
+  button {
+    &.image {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }

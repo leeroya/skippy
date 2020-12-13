@@ -27,7 +27,8 @@ import { environment } from '../environments/environment';
         SideNavModule,
       AuthModule.forRoot({
         domain: environment.authDomain,
-        clientId: environment.authClientId
+        clientId: environment.authClientId,
+        scope: environment.authScope
       }),
     ],
   providers: [],
