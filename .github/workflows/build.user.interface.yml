@@ -18,7 +18,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      working-directory: ./ui
+      working-directory: ./src/Client
     strategy:
       matrix:
         node-version: [12.x]
@@ -35,4 +35,4 @@ jobs:
       working-directory: ${{ env.working-directory}}
       run: |
           npm ci
-          npm run build:ci
+          npm run build:prod
