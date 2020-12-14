@@ -10,32 +10,20 @@ on:
       - 'feat/**'
       - master
 
+env:
+  BuildConfig: Release
+  SolutionFile: Skippy.sln
+
 jobs:
 
   build:
     name: Build
     runs-on: ubuntu-latest
     env:
-      working-directory: ./api/cmd/_skippy_
+      working-directory: ./src
     steps:
-
-    - name: Set up Go 1.13
-      uses: actions/setup-go@v1
+    - uses: actions/checkout@main
+    - uses: actions/setup-dotnet@v1
       with:
-        go-version: 1.13
-      id: go
-
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v2
-
-    - name: Get dependencies
-      run: |
-        go get -v -t -d ./...
-        if [ -f Gopkg.toml ]; then
-            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-            dep ensure
-        fi
-
-    - name: Build
-      working-directory: ${{ env.working-directory}}
-      run: go build -v .
+        dotnet-version: '5.0' # SDK Version to use; x will use the latest version of the 3.1 channel
+    - run: dotnet build Skippy.sln
