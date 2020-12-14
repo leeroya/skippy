@@ -21,10 +21,7 @@ Skippy is a project that has been created to have a mechanism to allow students 
 
 ## Project structure
 
-Based on a overview of : [goland standards](https://github.com/golang-standards/project-layout)  the folder string is as follows:
-
 ```
-
 
 src
 ---> Client
@@ -35,7 +32,6 @@ src
 
 ---> Shared
 -------> Models and Shared Services
-
 
 
 ```
