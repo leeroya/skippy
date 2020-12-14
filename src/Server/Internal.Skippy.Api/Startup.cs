@@ -28,6 +28,7 @@ namespace Internal.Skippy.Api
         {
 
             services.AddControllers();
+            services.AddApiVersioning(options => { options.AssumeDefaultVersionWhenUnspecified = true; });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Internal.Skippy.Api", Version = "v1" });

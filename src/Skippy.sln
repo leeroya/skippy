@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internal.Skippy", "Shared\I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internal.Skippy.Tests", "Test\Internal.Skippy.Tests\Internal.Skippy.Tests.csproj", "{F793AD6F-5AB8-4DA0-BFDD-24BCCC68D7B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{AAD3AD64-0E45-403C-AC85-9D5FD562BB6A}"
+ProjectSection(SolutionItems) = preProject
+	..\README.md = ..\README.md
+	..\CONTRIBUTING.md = ..\CONTRIBUTING.md
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

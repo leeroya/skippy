@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Internal.Skippy.Api.Controllers
+namespace Internal.Skippy.Api.Controllers.V1
 {
     [ApiController]
-    [Route("[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{v:apiVersion}/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

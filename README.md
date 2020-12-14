@@ -13,6 +13,7 @@ Skippy is a project that has been created to have a mechanism to allow students 
 #### API - Server side
 
 - dotnet core C# 5.0
+- [Versioning](https://www.jasongaylord.com/blog/2020/09/18/versioning-rest-api-using-aspnet-core)
 
 #### User interface
 
