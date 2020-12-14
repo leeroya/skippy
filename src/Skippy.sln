@@ -19,6 +19,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 ProjectSection(SolutionItems) = preProject
 	..\README.md = ..\README.md
 	..\CONTRIBUTING.md = ..\CONTRIBUTING.md
+	..\diagrams\exported\student.workflow.png = ..\diagrams\exported\student.workflow.png
+	..\diagrams\exported\teacher.workflow.png = ..\diagrams\exported\teacher.workflow.png
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{8B34E8B8-D465-4DB0-B45F-63C05C10487B}"
+ProjectSection(SolutionItems) = preProject
+	..\.github\FUNDING.yml = ..\.github\FUNDING.yml
+	..\.github\.DS_Store = ..\.github\.DS_Store
+	..\.github\workflows\server.build.yml = ..\.github\workflows\server.build.yml
+	..\.github\workflows\stale.yml = ..\.github\workflows\stale.yml
+	..\.github\workflows\label.yml = ..\.github\workflows\label.yml
+	..\.github\workflows\greetings.yml = ..\.github\workflows\greetings.yml
+	..\.github\workflows\build.user.interface.yml = ..\.github\workflows\build.user.interface.yml
+	..\.github\ISSUE_TEMPLATE\feature_request.md = ..\.github\ISSUE_TEMPLATE\feature_request.md
+	..\.github\ISSUE_TEMPLATE\bug_report.md = ..\.github\ISSUE_TEMPLATE\bug_report.md
 EndProjectSection
 EndProject
 Global
@@ -37,6 +52,7 @@ Global
 		{96E98DD9-A9D6-4FE8-B00F-32BC0A97E29E} = {510A7DFB-1D36-448C-8254-8D7E40A92884}
 		{C98DDFB5-9674-4053-826B-AAAC48554BF8} = {3A4A904E-E537-43C2-A6E7-42D9ACB84989}
 		{F793AD6F-5AB8-4DA0-BFDD-24BCCC68D7B2} = {EB6E70B8-C446-40CE-ADA2-6584B11E7736}
+		{8B34E8B8-D465-4DB0-B45F-63C05C10487B} = {AAD3AD64-0E45-403C-AC85-9D5FD562BB6A}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{96E98DD9-A9D6-4FE8-B00F-32BC0A97E29E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
