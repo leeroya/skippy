@@ -19,11 +19,9 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./src
     steps:
     - uses: actions/checkout@main
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '5.0' # SDK Version to use; x will use the latest version of the 3.1 channel
-    - run: dotnet build Skippy.sln
+    - run: dotnet build src/Skippy.sln
